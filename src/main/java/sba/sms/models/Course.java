@@ -59,6 +59,11 @@ public class Course {
     @ManyToMany(fetch = FetchType.EAGER,cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.REMOVE, CascadeType.PERSIST})
     private Set<Student> students = new LinkedHashSet<>();
 
+    public Course(String name, String instructor) {
+        this.name = name;
+        this.instructor = instructor;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

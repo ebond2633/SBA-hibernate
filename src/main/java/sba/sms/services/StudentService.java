@@ -5,13 +5,16 @@ import lombok.*;
 import lombok.extern.java.Log;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 import sba.sms.dao.StudentI;
 import sba.sms.models.Course;
 import sba.sms.models.Student;
 import sba.sms.utils.HibernateUtil;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,7 +30,7 @@ import java.util.List;
 @Getter
 @Entity
 public class StudentService implements StudentI{
-
+//SessionFactory factory = new Configuration().configure().buildSessionFactory();
 
     @Override
     public List<Student> getAllStudents() {
@@ -36,6 +39,7 @@ public class StudentService implements StudentI{
 
     @Override
     public void createStudent(Student student) {
+        Student student2 = new Student("hi", "bye", "password");
 
     }
 

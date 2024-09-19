@@ -44,17 +44,14 @@ import java.util.Set;
   List<Course> getStudentCourses;
 
 
-//  @Override
-//    public List <Student> getAllStudents{
-//      return List.of();
-//    }
-//    @Override
-//    public void createStudent (Student student){
-//
-//    }
-//@Override
-//    public Student getStudentByEmail(String email){
-//      return null;
+  public Student(){
+
+  }
+    public Student(String name, String email, String password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
 }
 
 
